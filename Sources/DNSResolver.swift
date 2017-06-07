@@ -1,7 +1,7 @@
 import Foundation
 
 private let kCopyNoOperation = unsafeBitCast(0, to: CFAllocatorCopyDescriptionCallBack.self)
-private let kDefaultTimeout = 8.0
+let kDefaultTimeout2 = 8.0
 
 final class DNSResolver {
     private var completion: (([InternetAddress]) -> Void)?
@@ -16,7 +16,7 @@ final class DNSResolver {
     /// - parameter timeout:    The connection timeout.
     /// - parameter completion: A completion block that will be called both on failure and success with a list
     ///                         of IPs.
-    static func resolve(host: String, timeout: TimeInterval = kDefaultTimeout,
+    static func resolve(host: String, timeout: TimeInterval = kDefaultTimeout2,
                         completion: @escaping ([InternetAddress]) -> Void)
     {
         let callback: CFHostClientCallBack = { host, hostinfo, error, info in

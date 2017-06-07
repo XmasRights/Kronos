@@ -1,9 +1,9 @@
 import Foundation
 
-private let kDefaultTimeout = 6.0
-private let kDefaultSamples = 4
-private let kMaximumNTPServers = 5
-private let kMaximumResultDispersion = 10.0
+let kDefaultTimeout = 6.0
+let kDefaultSamples = 4
+let kMaximumNTPServers = 5
+let kMaximumResultDispersion = 10.0
 
 private typealias ObjCCompletionType = @convention(block) (Data?, TimeInterval) -> Void
 
